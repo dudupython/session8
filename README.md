@@ -39,65 +39,65 @@ https://<user name>.github.io/
 ## Usage
 
 **Basic command**
-- `git init` Khởi tạo
+- `git init` Khởi tạo (thường khi tải về đã được khởi tạo rồi)
 - `git clone` Tải 1 repo về
 - `git add <file name>` Đưa file vào trạng thái lên sân khấu để theo dấu
 - `git commit -m` save 1 version
 - `git push origin main` main/master, đẩy lên remote repository
-
+- `git pull` kéo các thay đổi về local
 
 # Anaconda
 
-**Notes**:
-Tạo môi trường mới
-conda create -n env_name [python=X.X] [LIST_OF_PACKAGES]
 
-conda create --name py39_stock python=3.9 pandas requests
+**Tạo môi trường mới**
+`conda create -n env_name [python=X.X] [LIST_OF_PACKAGES]`
 
-Kích hoạt
-conda activate py39_stock
+`conda create --name py39_stock python=3.9 pandas requests`
 
-=> Sẽ hiện (py39_stock) ở terminal
+**Kích hoạt**
+`conda activate py39_stock`
 
-**Note
-# For  conda 4.6 and later versions on Linux/macOS/Windows, use
-conda activate my_env
-#For conda versions prior to 4.6 on Linux/macOS, use 
-source activate my_env
-#For conda versions prior to 4.6 on Windows, use 
-activate my_env
+=> `Sẽ hiện (py39_stock) ở terminal`
 
-Thoát môi trường
-conda deactivate
+        **Note
+        For  conda 4.6 and later versions on Linux/macOS/Windows, use
+        conda activate my_env
+        #For conda versions prior to 4.6 on Linux/macOS, use 
+        source activate my_env
+        #For conda versions prior to 4.6 on Windows, use 
+        activate my_env
 
-**Note
-# For  conda 4.6 and later versions on Linux/macOS/Windows, use
-conda deactivate
-#For conda versions prior to 4.6 on Linux/macOS, use 
-source deactivate
-#For conda versions prior to 4.6 on Windows, use 
-deactivate
+**Thoát môi trường**
+`conda deactivate`
+
+        Note:
+        For  conda 4.6 and later versions on Linux/macOS/Windows, use
+        conda deactivate
+        #For conda versions prior to 4.6 on Linux/macOS, use 
+        source deactivate
+        #For conda versions prior to 4.6 on Windows, use 
+        deactivate
 
 
-Liệt kê các môi trường đang có
-conda env list
+**Liệt kê các môi trường đang có**
+`conda env list`
 
-Liệt kê các package trong môi trường đang có
-conda list
+**Liệt kê các package trong môi trường đang có**
+`conda list`
 
-Cài đặt các package bổ sung
-conda install pip
-conda install numpy scipy pandas
+**Cài đặt các package bổ sung**
+`conda install pip`
+`conda install numpy scipy pandas`
 
 Conda tự động cài đặt các thư viện phụ thuộc (dependencies) giúp mình. Ví dụ thư viện scipy sử dụng numpy, “conda install scipy” sẽ tự động cài luôn numpy
 
-Update Packages
+**Update Packages**
 conda update package_name
 
-Remove Packages
+**Remove Packages**
 conda remove PACKAGE_NAME
 
-Search a Package to Install
+**Search a Package to Install**
 conda search *beautifulsoup*
 
 https://conda.io/projects/conda/en/latest/commands.html
@@ -105,11 +105,11 @@ https://conda.io/projects/conda/en/latest/commands.html
 Share the List of Dependencies
 Đối với người dùng không sử dụng conda, cách tạo ra danh sách các package trong file requirements.txt:
 
-pip freeze > requirements.txt
+`pip freeze > requirements.txt`
 
 Sau đó có thể cài đặt tất cả package cần thiết:
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 ## References
 
