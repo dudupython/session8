@@ -86,23 +86,24 @@ https://<user name>.github.io/
 `conda list`
 
 **Cài đặt các package bổ sung**
+
 `conda install pip`
 `conda install numpy scipy pandas`
 
 Conda tự động cài đặt các thư viện phụ thuộc (dependencies) giúp mình. Ví dụ thư viện scipy sử dụng numpy, “conda install scipy” sẽ tự động cài luôn numpy
 
 **Update Packages**
-conda update package_name
+`conda update package_name`
 
 **Remove Packages**
-conda remove PACKAGE_NAME
+`conda remove PACKAGE_NAME`
 
 **Search a Package to Install**
-conda search *beautifulsoup*
+`conda search *beautifulsoup*`
 
 https://conda.io/projects/conda/en/latest/commands.html
 
-Share the List of Dependencies
+**Share the List of Dependencies**
 Đối với người dùng không sử dụng conda, cách tạo ra danh sách các package trong file requirements.txt:
 
 `pip freeze > requirements.txt`
@@ -114,6 +115,7 @@ Sau đó có thể cài đặt tất cả package cần thiết:
 ## References
 
 **Link** 
+
 https://www.youtube.com/watch?v=NcoBAfJ6l2Q
 https://www.w3schools.com/html/
 https://www.freecodecamp.org/news/python-version-on-mac-update/
