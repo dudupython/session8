@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# Welcome to repository
+# Welcome to Session 8
 
 ## Intall Git & Basic use
 
@@ -46,22 +46,70 @@ https://<user name>.github.io/
 - `git push origin main` main/master, đẩy lên remote repository
 
 
-## Explaination 
+# Anaconda
 
 **Notes**:
+Tạo môi trường mới
+conda create -n env_name [python=X.X] [LIST_OF_PACKAGES]
 
-- Pydantic model (data validation) khác với sqlAlchemy model (class & intanstant interact with database)
-- Pydantic model trong schemas.py, SQLAlchemy model trong models.py của từng Feature/Project
-- Mỗi tính năng sẽ có model/database.py riêng, DB chung ở database/core.py    
-- `#database/core.py`  Create SQLAlchemy models from the `Base` class and import to  models.py of each Project  
-- `orm_mode = True` - Pydantic's orm_mode will tell the Pydantic model to read the data even if it is not a dict  
-- `SessionLocal` - instant class of database session  
-- `Session` from  `sqlalchemy.orm` - The session is an SQLAlchemy object used to communicate with SQLite in the Python example programs
-- `Alembic` module - initialize your database (create tables, etc) & migrations
+conda create --name py39_stock python=3.9 pandas requests
 
-- Flow: Add job schedule, đến thời điểm triggle (`cron`, `interval`) sẽ vào hàng đợi của Celery
-- Mỗi lần thay đổi logic ở `@task` của celery phải reset lại worker
-- Không cần phải restart server khi hẹn giờ cho task
+Kích hoạt
+conda activate py39_stock
+
+=> Sẽ hiện (py39_stock) ở terminal
+
+**Note
+# For  conda 4.6 and later versions on Linux/macOS/Windows, use
+conda activate my_env
+#For conda versions prior to 4.6 on Linux/macOS, use 
+source activate my_env
+#For conda versions prior to 4.6 on Windows, use 
+activate my_env
+
+Thoát môi trường
+conda deactivate
+
+**Note
+# For  conda 4.6 and later versions on Linux/macOS/Windows, use
+conda deactivate
+#For conda versions prior to 4.6 on Linux/macOS, use 
+source deactivate
+#For conda versions prior to 4.6 on Windows, use 
+deactivate
+
+
+Liệt kê các môi trường đang có
+conda env list
+
+Liệt kê các package trong môi trường đang có
+conda list
+
+Cài đặt các package bổ sung
+conda install pip
+conda install numpy scipy pandas
+
+Conda tự động cài đặt các thư viện phụ thuộc (dependencies) giúp mình. Ví dụ thư viện scipy sử dụng numpy, “conda install scipy” sẽ tự động cài luôn numpy
+
+Update Packages
+conda update package_name
+
+Remove Packages
+conda remove PACKAGE_NAME
+
+Search a Package to Install
+conda search *beautifulsoup*
+
+https://conda.io/projects/conda/en/latest/commands.html
+
+Share the List of Dependencies
+Đối với người dùng không sử dụng conda, cách tạo ra danh sách các package trong file requirements.txt:
+
+pip freeze > requirements.txt
+
+Sau đó có thể cài đặt tất cả package cần thiết:
+
+pip install -r requirements.txt
 
 ## References
 
